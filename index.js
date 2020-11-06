@@ -2,12 +2,12 @@
 const express = require('express')
 const cors = require('cors')
 
-const lbProfile = {
+const lbProfile = { 
   firstName: 'Lamara',
   lastName: "Brown",
   preferences: {
-    foods: ["Saturday Soup", "Popcorn", ""],
-    dream holiday: "oanywher hot",
+    foods: ["Saturday Soup", "Popcorn"],
+    dreamHoliday: "Anywhere hot",
     number: 7
   },
   hoursOfSleep: "what is sleep?"
@@ -16,21 +16,81 @@ const lbProfile = {
 const db = {
   profiles: {
     1000: lbProfile,
-  },
   books: {
-        0: {
-          title: 'The Blacker the Berry',
-          author: 'Wallace Thurman '
-        },
-        1: {
-            title: 'Here To Stay',
-            author: ' Mark Edwards '
-          },
-          2: {
-            title: 'I Am Watching You',
-            author: 'Teresa Driscoll '
-          },
+    0: {
+      title: "Animal Farm",
+      author: "George Orwell"
+    },
+    1: {
+      title: "The Blacker the Berry",
+      author: "Wallace Thurman"
+    },
+    2: {
+      title: "I Am Watching You",
+      author: "Teresa Driscoll",
+    },
+  },
+clothes: {
+  0: {
+    favouriteShoe: "nike trainers",
+  },
+  tv: {
+    0: {
+      favouriteChannel: "Netflix",
+      favouriteShow: "Queen of the South",
+      lengthOfTimeWatchingTvPerDay: "4",
+    }
+  }
+}}}
+
+
+const jsProfile = { 
+  firstName: "John",
+  lastName: "Smith",
+  preferences: {
+    foods: ["Indian", "Is beer a food?"],
+    dreamHoliday: "Spain",
+    number: 4
+  },
+  hoursOfSleep: 7
 }
+
+const db1 = {
+  profiles: {
+    1001: jsProfile,
+  books: {
+    0: {
+      title: "Tricks of The Mind",
+      author: "Darren Brown"
+    },
+    1: {
+      title: "No Mercy",
+      author: "Martina Cole"
+    },
+    2: {
+      title: "Troubled Blood",
+      author: " Robert Galbraith",
+    },
+  },
+clothes: {
+  0: {
+    favouriteShoe: "brogues",
+  },
+  tv: {
+    0: {
+      favouriteChannel: 'BBC1',
+      favouriteShow: 'Match of The Day',
+      lengthOfTimeWatchingTvPerDay:'7',
+    }
+  }
+}}}
+
+
+
+
+
+
+
 
 const app = express()
 app.use(cors())
@@ -80,7 +140,6 @@ app.get('/profiles/:userId', (req, res) => {
   
 })
 
-
 app.delete('/profiles/:userId', (req, res) => {
 
   delete db.profiles[req.params.userId]
@@ -91,12 +150,10 @@ app.delete('/profiles/:userId', (req, res) => {
   })
 })
 
-
 app.put('/profiles/:userId', (req, res) => {
   const idToUpdate = req.params.userId
 
   db.profiles[idToUpdate] = req.body
-
 
   res.status(200).json({
     message: "User updated"
@@ -114,7 +171,6 @@ app.patch('/profiles/:userId', (req, res) => {
     message: "User updated"
   })
 })
-
 
 app.listen(4000, () => {
   console.log('server is running!')
