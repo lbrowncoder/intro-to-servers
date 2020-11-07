@@ -43,6 +43,7 @@ clothes: {
   }
 }}}
 
+//Second profile added//
 const jsProfile = { 
   firstName: "John",
   lastName: "Smith",
@@ -53,7 +54,7 @@ const jsProfile = {
   },
   hoursOfSleep: 7,
 }
-const db1 = {
+const db2 = {
   profiles: {
     1001: jsProfile,
   books: {
@@ -82,6 +83,52 @@ clothes: {
     }
   }
 }}}
+
+//Third profile added//
+const jdProfile = { 
+  firstName: "Jane",
+  lastName: "Doe",
+  preferences: {
+    foods: ["Pizza", "chips"],
+    dreamHoliday: "Mexico",
+    number: 5
+  },
+  hoursOfSleep: 9,
+}
+const db1 = {
+  profiles: {
+    1002: jsProfile,
+  books: {
+    0: {
+      title: "Cook, Eat, Repeat: Ingredients, recipes and stories.",
+      author: "Nigella Lawson"
+    },
+    1: {
+      title: "Diary of a Wimpy Kid: The Deep End",
+      author: "Jeff Kinney"
+    },
+    2: {
+      title: "Relentless: 12 Rounds to Success",
+      author: "  Eddie Hearn ",
+    },
+  },
+clothes: {
+  0: {
+    favouriteShoe: "high heels",
+  },
+  tv: {
+    0: {
+      favouriteChannel: 'Amazon Prime',
+      favouriteShow: 'Eastenders',
+      lengthOfTimeWatchingTvPerDay:'2',
+    }
+  }
+},
+
+
+
+}
+}
 
 
 const app = express()
