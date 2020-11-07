@@ -54,7 +54,7 @@ const jsProfile = {
   },
   hoursOfSleep: 7,
 }
-const db2 = {
+const db1 = {
   profiles: {
     1001: jsProfile,
   books: {
@@ -95,7 +95,7 @@ const jdProfile = {
   },
   hoursOfSleep: 9,
 }
-const db1 = {
+const db2 = {
   profiles: {
     1002: jsProfile,
   books: {
@@ -123,7 +123,51 @@ clothes: {
       lengthOfTimeWatchingTvPerDay:'2',
     }
   }
+}}}
+
+
+//Fouth profile added//
+const ygProfile = { 
+  firstName: "Yasmin",
+  lastName: "Greene",
+  preferences: {
+    foods: ["beef stew", "curry"],
+    dreamHoliday: "Australia",
+    number: "N/A"
+  },
+  hoursOfSleep: 6,
+}
+const db3 = {
+  profiles: {
+    1003: jsProfile,
+  books: {
+    0: {
+      title: "Cook, Eat, Repeat: Ingredients, recipes and stories.",
+      author: "Nigella Lawson"
+    },
+    1: {
+      title: "Diary of a Wimpy Kid: The Deep End",
+      author: "Jeff Kinney"
+    },
+    2: {
+      title: "Relentless: 12 Rounds to Success",
+      author: "  Eddie Hearn ",
+    },
+  },
+clothes: {
+  0: {
+    favouriteShoe: "high heels",
+  },
+  tv: {
+    0: {
+      favouriteChannel: 'Netlix',
+      favouriteShow: "X-factor",
+      lengthOfTimeWatchingTvPerDay:"4",
+    }
+  }
 },
+
+
 
 
 
