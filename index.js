@@ -43,7 +43,6 @@ clothes: {
   }
 }}}
 
-
 const jsProfile = { 
   firstName: "John",
   lastName: "Smith",
@@ -52,9 +51,8 @@ const jsProfile = {
     dreamHoliday: "Spain",
     number: 4
   },
-  hoursOfSleep: 7
+  hoursOfSleep: 7,
 }
-
 const db1 = {
   profiles: {
     1001: jsProfile,
@@ -84,12 +82,6 @@ clothes: {
     }
   }
 }}}
-
-
-
-
-
-
 
 
 const app = express()
